@@ -17,10 +17,11 @@
      display: flex;
      justify-content: center;
      align-items: center;
+     flex-direction: column;
  }
  
  .wrapper {
-     width: 75%;
+     width: 65%;
      margin: 0 auto;
  }
  
@@ -79,6 +80,7 @@
      padding-right: 15px;
      font-weight: 800;
      color: hsl(183, 100%, 15%);
+     font-size: 18px;
  }
  
  .form-input input:focus {
@@ -98,7 +100,7 @@
      margin-bottom: 2rem;
  }
  
- .cl-tip {
+ .cl-tip:not(.cl-custom) {
      background-color: hsl(183, 100%, 15%);
      color: hsl(0, 0%, 100%);
      font-size: 1rem;
@@ -110,12 +112,16 @@
      cursor: pointer;
  }
  
- .cl-tip:hover {
+ .cl-tip:hover:not(.cl-custom) {
      background-color: hsl(172, 67%, 45%);
  }
  
  .cl-custom {
      width: 30%;
+ }
+ 
+ .cl-tip.active {
+     background-color: hsl(172, 67%, 45%);
  }
  
  #custom {
@@ -191,7 +197,7 @@
  }
  
  .tip-action {
-     margin-top: 12rem;
+     margin-top: 10rem;
  }
  
  .tip-reset {
@@ -211,9 +217,21 @@
      background-color: hsl(172, 67%, 45%);
  }
  
+ .attribution {
+     font-size: 12px;
+     text-align: center;
+     margin-top: 40px;
+     width: 65%;
+ }
+ 
+ .attribution a {
+     color: hsl(183, 100%, 15%);
+ }
+ 
  @media only screen and (max-width: 600px) {
-     body {
-         background-color: black;
+     body {}
+     .wrapper {
+         width: 80%;
      }
      .calc {
          flex-direction: column;
@@ -225,14 +243,8 @@
      .tip-action {
          margin-top: 2rem;
      }
- }
- /** This was originally styled**/
- 
- .attribution {
-     font-size: 11px;
-     text-align: center;
- }
- 
- .attribution a {
-     color: hsl(228, 45%, 44%);
+     .attribution {
+         font-size: 10px;
+         width: 100%;
+     }
  }

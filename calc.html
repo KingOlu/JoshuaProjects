@@ -22,6 +22,7 @@
 
             <div class="calc-left">
 
+
                 <div class="cl-input">
                     <label for="bill">Bill</label>
                     <div class="form-input">
@@ -29,20 +30,17 @@
                         <input type="number" id="bill" aria-label="Bill" placeholder="0">
                     </div>
                 </div>
-
                 <h3 class="cl-tips-title">Select Tip %</h3>
-
                 <div class="cl-tips">
                     <div class="cl-tip">5%</div>
                     <div class="cl-tip">10%</div>
                     <div class="cl-tip">15%</div>
                     <div class="cl-tip">25%</div>
                     <div class="cl-tip">50%</div>
-                    <div class="cl-custom">
+                    <div class="cl-tip cl-custom">
                         <input type="number" placeholder="Custom" id="custom">
                     </div>
                 </div>
-
                 <div class="cl-input">
                     <label for="bill">Number of People</label>
                     <div class="form-input">
@@ -51,33 +49,34 @@
                     </div>
                 </div>
             </div>
-
             <div class="calc-right">
                 <div class="tip">
                     <div class="tip-info">
                         <h3 class="tip1">Tip Amount</h3>
                         <p class="tip-sub">/ person</p>
                     </div>
-                    <h3 class="tip-amount">$0.00</h3>
+                    <h3 id="tip-per-person" class="tip-amount">$0.00</h3>
                 </div>
                 <div class="tip">
                     <div class="tip-info">
                         <h3 class="tip1">Total</h3>
                         <p class="tip-sub">/ person</p>
                     </div>
-                    <h3 class="tip-amount">$0.00</h3>
+                    <h3 id="total-per-person" class="tip-amount">$0.00</h3>
                 </div>
                 <div class="tip-action">
-                    <button class="tip-reset">Reset</button>
+                    <button type="reset" value="reset" class="tip-reset" onclick="document.location.reload()">Reset</button>
                 </div>
             </div>
+
         </div>
     </div>
 
 
-    <!--<div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
-    </div>-->
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/KingOlu/TipCalculator" target="_blank">Joshua Oluwatola</a>.
+    </div>
+    <script src="calc.js"></script>
 </body>
 
 </html>
